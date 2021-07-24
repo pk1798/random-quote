@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import shortid from 'shortid';
 import Quote from './Quote';
 
 const Random = () => {
@@ -29,7 +30,7 @@ const Random = () => {
             <>
                 <button onClick={handleGenerate}>Generate</button> 
                 <div className="container">
-                        {quote && <Quote quote={quote} author={author} genre={genre}/>}
+                        {quote && <Quote quote={quote} key={shortid.generate()} author={author} genre={genre}/>}
                 </div>
             </>
      );
