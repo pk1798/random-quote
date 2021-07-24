@@ -18,12 +18,13 @@ const QuoteList = () => {
       },[])
 
     return ( 
-        <>
-        <h2>{name}</h2>
-        <div className="quotes-container">
-            {quotes.map(quote=> <h3>{quote.quoteText}</h3>)}
+        <div className="quotes-conatiner">
+            <h2>{name}</h2>
+            <div className="quotes-container">
+                {quotes.map(quote=> <p>{quote.quoteText}</p>)}
+            </div>
         </div>
-        </>
+        
      );
 }
  

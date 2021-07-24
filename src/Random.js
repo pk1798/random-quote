@@ -26,10 +26,12 @@ const Random = () => {
   }
 
     return ( 
-       <div className="container">
-            {quote && <Quote quote={quote} author={author} genre={genre}/>}
-            <button onClick={handleGenerate}>Generate</button>
-       </div>
+            <>
+                <button onClick={handleGenerate}>Generate</button> 
+                <div className="container">
+                        {quote && <Quote quote={quote} author={author} genre={genre}/>}
+                </div>
+            </>
      );
 }
  
